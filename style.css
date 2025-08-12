@@ -1,0 +1,94 @@
+/* --- Global Styles & Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #0d1117; /* GitHub Dark Grey */
+    color: #c9d1d9; /* GitHub Dark Text */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* --- Header --- */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #58a6ff; /* GitHub Dark Blue */
+    margin-bottom: 0.5em;
+}
+
+header .bio {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 2.5em auto;
+    color: #8b949e; /* GitHub Muted Text */
+}
+
+/* --- Link Cards --- */
+.link-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.link-card {
+    display: block;
+    background-color: #161b22; /* GitHub Dark Slightly Lighter */
+    border: 1px solid #30363d; /* GitHub Dark Border */
+    padding: 20px 25px;
+    text-decoration: none;
+    color: #c9d1d9;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    border-color: #00bfff; /* Deep Sky Blue for a tech glow */
+    background-color: #1f252d;
+}
+
+.link-card .link-title {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #58a6ff;
+    margin-bottom: 5px;
+}
+
+.link-card .link-desc {
+    font-size: 0.95rem;
+    color: #8b949e;
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: 3em;
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
