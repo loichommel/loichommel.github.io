@@ -3,8 +3,7 @@
 
 body {
     font-family: 'Fira Code', monospace;
-    background-color: #0d1117; /* GitHub Dark Grey */
-    color: #c9d1d9; /* GitHub Dark Text */
+    color: #c9d1d9;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -12,6 +11,15 @@ body {
     align-items: center;
     min-height: 100vh;
     font-size: 16px;
+
+    /* --- BACKGROUND IMAGE STYLES --- */
+    /* This applies a semi-transparent dark layer on top of your image */
+    /* Make sure your image file is named 'background.jpg' in your repository */
+    background-image: linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 0.85)), url('background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* This creates a cool parallax effect */
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -34,7 +42,7 @@ header .bio {
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto 2.5em auto;
-    color: #8b949e; /* GitHub Muted Text */
+    color: #c9d1d9; /* Changed for better readability on image */
 }
 
 /* --- Link Cards --- */
@@ -45,7 +53,8 @@ header .bio {
 
 .link-card {
     display: block;
-    background-color: #161b22; /* GitHub Dark Slightly Lighter */
+    /* Slightly more transparent to let the background show through */
+    background-color: rgba(22, 27, 34, 0.8);
     border: 1px solid #30363d; /* GitHub Dark Border */
     padding: 20px 25px;
     text-decoration: none;
@@ -53,12 +62,14 @@ header .bio {
     border-radius: 8px;
     text-align: left;
     transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    backdrop-filter: blur(2px); /* Adds a subtle frosted glass effect */
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .link-card:hover {
     transform: translateY(-5px);
     border-color: #00bfff; /* Deep Sky Blue for a tech glow */
-    background-color: #1f252d;
+    background-color: rgba(31, 37, 45, 0.9);
 }
 
 .link-card .link-title {
